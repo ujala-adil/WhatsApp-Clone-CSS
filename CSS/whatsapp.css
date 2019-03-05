@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,11 +13,12 @@ body {
 .main-box {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
     display: flex;
-    flex: 1;
     position: fixed;
     background-color: #1ebea5;
     width: 100%;
@@ -22,28 +29,18 @@ body {
 
 .nav-bar {
     align-self: center;
-}
-
-.nav-list {
     display: flex;
+    margin-left: 180px;
 }
 
-.nav-bar ul {
-    list-style: none;
-    margin-left: 170px;
-}
-
-.nav-bar ul li {
-    display: inline-block;
-}
-
-.nav-bar ul li a {
+.nav-bar a {
     text-decoration: none;
     color: white;
-    padding-left: 56px;
     font-size: 12px;
+    padding: 14px 28px;
     letter-spacing: 0.7px;
     font-weight: 600;
+    text-align: center;
 }
 
 .whatsapp-anchor {
@@ -69,7 +66,6 @@ body {
 
 .box-1 {
     display: flex;
-    width: 58.5%;
     margin: auto;
     flex-wrap: wrap;
     margin-top: 100px;
@@ -92,7 +88,9 @@ body {
 
 .text {
     color: #6c6c6c;
+    line-height: 25px;
     font-size: 17px;
+    margin-top: 16px;
 }
 
 .note {
@@ -100,6 +98,7 @@ body {
     font-size: 12px;
     line-height: 5px;
     letter-spacing: 0.7px;
+    margin-top: 16px;
 }
 
 .cellphone-image img{
@@ -112,7 +111,6 @@ body {
 .portability ul {
     list-style-type: none;
     margin-top: 35px;
-    margin-left: -35px;
 }
 
 .portability ul li {
@@ -231,34 +229,32 @@ iframe {
 }
 
 .last-box {
-    display: flex;
-    justify-content: space-around;
-    color: white;
     background-color: #273443;
-    height: 248px;
+    width: 100%;
 }
 
 .inner-last-box {
+    height: 248px;
     display: flex;
-    justify-content: space-around;
     color: white;
-    width: 72%;
-    margin-top: 1%;
-    height: 200px;
-    margin-left: -14%;
+    justify-content: center;
 }
 
-.last-box ul {
+.inner-last-box div {    
+    padding-right: 10%;
+}
+
+.inner-last-box ul {
     list-style-type: none;
     padding-top: 25%;
     font-size: 13px;
 }
 
-.last-box ul li {
+.inner-last-box ul li {
     margin-bottom: 10%;
 }
 
-.last-box ul li a {
+.inner-last-box ul li a {
     text-decoration: none;
     color: white;
     letter-spacing: 0.5px;
@@ -273,7 +269,7 @@ iframe {
 }
 
 .list-4 {
-    margin-top: 1.26%;
+    margin-top: 0.7%;
 }
 
 .list-4-item {
@@ -290,8 +286,8 @@ iframe {
 
 .copyright{
     color: #ffffff99;
-    width: 19%;
-    margin-left: 14%;
+    width: 17.4%;
+    margin-left: 17%;
 }
 
 .privacy-and-terms a{
@@ -307,9 +303,204 @@ iframe {
 
 label {
     display: none;
-    font-size: 20px;
+    font-size: 30px;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+label i {
+    color: white;
 }
 
 #toggle {
     display: none;
+}
+
+.play-store {
+    display: none;
+}
+
+
+@media screen and (max-width: 1185px) {
+    .nav-bar {
+        margin-left: 5%;
+    }
+
+    .nav-bar a {
+        flex-shrink: 2;
+    }
+
+    .whatsapp-anchor {
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 1049px) {
+    .nav-bar {
+        margin-left: 4%;
+    }
+
+    .nav-bar a {
+        flex-shrink: 2;
+    }
+
+    .whatsapp-logo img {
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-box {
+        width: 100%;
+    }
+
+    label{
+        display: inline-block;
+        position: absolute;
+        left: 40%;
+        font-size: 60px;
+    }
+
+    .header {
+        height: 150px;
+        position: relative;
+    }
+
+    .whatsapp-anchor {
+        display: none;
+    }
+
+    .nav-bar a {
+        border-bottom: 1px solid #d0e9ea;
+        font-size: 20px;
+        text-align: left;
+        padding-bottom: 10px;
+        background-color: #1ebea5;
+        padding: 20px;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        display: none;
+        margin: 0;
+        padding: 0;
+        padding-top: 30%;
+        padding-left: 5%;
+        width: 100%;
+        height: 160%;
+    }
+
+    #toggle:checked + .nav-bar {
+        display: flex;
+    }
+
+    .box-1 {
+        background: #1ebea5;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .message .heading {
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        text-align: center;
+        color: white;
+    }
+
+    .note-responsive {
+        margin-top: 5%;
+        margin-bottom: -6%;
+        color: #bebebe;
+    }
+
+    .cellphone-image {
+        margin-bottom: -30%;
+    }
+
+    .play-store {                    
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        width: 156.5px;
+        height: 48px;
+        align-self: center;
+    }
+
+    .text {
+        color: white;
+        align-self: center;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .note {
+        display: none;
+    }
+
+    .box-2 {
+        flex-direction: column;
+        height: 140vh;
+        margin: 0;
+    }
+
+    .box-2-left {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .box-2-right {
+        width: 100%;
+    }
+
+    .last-box{
+        margin: 0;
+    }
+
+    .last-box2 {
+        margin: 0;
+    }
+
+    .inner-last-box {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .inner-last-box div {
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+    }
+
+    .inner-last-box ul, .inner-last-box ul span {
+        font-size: 23px;
+        letter-spacing: 1px;
+    }
+
+    .last-box2 {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .inner-last-box div {
+        width: 90%;
+        text-align: center;
+    }
+
+    .inner-last-box ul, .inner-last-box ul span {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
 }
