@@ -101,6 +101,10 @@ body {
     margin-top: 16px;
 }
 
+.note-responsive {
+    display: none;
+}
+
 .cellphone-image img{
     width: 318px;
     height: 620px;
@@ -484,12 +488,12 @@ label i {
     }
 
     .inner-last-box ul, .inner-last-box ul span {
-        font-size: 23px;
+        font-size: 20px;
         letter-spacing: 1px;
     }
 
-    .last-box2 {
-        flex-wrap: wrap;
+    .privacy-and-terms {
+        padding-right: 25%;
     }
 }
 
